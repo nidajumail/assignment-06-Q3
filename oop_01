@@ -1,0 +1,11 @@
+class Student:
+    def __init__(self, name, marks):
+        self.name = name      # Student ka naam
+        self.marks = marks    # Student ke marks
+
+    def display(self):
+        print("Name:", self.name)
+        print("Marks:", self.marks)
+
+student1 = Student("Ali", 85)
+student1.display()
