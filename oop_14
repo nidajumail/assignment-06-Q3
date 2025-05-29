@@ -1,0 +1,28 @@
+# Employee class
+class Employee:
+    def __init__(self, emp_id, name):
+        self.emp_id = emp_id
+        self.name = name
+
+    def display_info(self):
+        print(f"Employee ID: {self.emp_id}, Name: {self.name}")
+
+# Department class using aggregation
+class Department:
+    def __init__(self, dept_name, employee):
+        self.dept_name = dept_name
+        self.employee = employee  # Aggregation: storing a reference
+
+    def display_department_info(self):
+        print(f"Department: {self.dept_name}")
+        self.employee.display_info()
+
+# Example 
+# Create an Employee object independently
+emp1 = Employee(101, "Alice")
+
+# Create a Department object and aggregate the Employee object
+dept1 = Department("Human Resources", emp1)
+
+# Display information
+dept1.display_department_info()
