@@ -1,0 +1,14 @@
+class Car:
+    def __init__(self, brand):
+        self.brand = brand  # Public variable
+
+    def start(self):
+        print(self.brand, "car is starting...")
+
+
+my_car = Car("Toyota")
+
+print("Car brand:", my_car.brand)
+
+
+my_car.start()
