@@ -1,0 +1,14 @@
+class Engine:
+    def start(self):
+        print("Engine started.")
+
+class Car:
+    def __init__(self, engine):
+        self.engine = engine  
+    def start_engine(self):
+        self.engine.start()  # Engine class ka method call kar rahe hain
+
+
+engine = Engine()        # Engine object banaya
+car = Car(engine)        # Car ko Engine object diya
+car.start_engine()       # Car ke through Engine start kiya
